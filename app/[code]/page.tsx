@@ -1,17 +1,24 @@
-import { SERIES_LIST, projects } from "@/constants/data";
+import { getProjects, getSeries } from "@/lib/data";
 import { PageProps } from "@/lib/server.types";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
 import { notFound } from "next/navigation";
 import ProjectRow from "../../components/ProjectRow";
 
+export const dynamic = "force-dynamic";
+
 export default async function Page({ params }: PageProps) {
-  const series = SERIES_LIST.find((s) => s.code === params.code);
-  const filteredProjects = projects.filter(
-    (project) => project.series.code === params.code,
-  );
+  const supabase = createServerComponentClient({ cookies });
+  const series = (await getSeries({ supabase, code: params.code }))[0];
+  const filteredProjects = await getProjects({ supabase, code: params.code });
 
   if (!series) {
     notFound();
   }
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
 
   return (
     <div className="flex flex-col gap-2">
@@ -35,7 +42,7 @@ export default async function Page({ params }: PageProps) {
         <ul className="max-w-2xl [&>*]:mt-2">
           {filteredProjects.map((project) => (
             <li key={`project-row-${project.id}`}>
-              <ProjectRow {...project} />
+              <ProjectRow {...project} user={user} />
             </li>
           ))}
         </ul>

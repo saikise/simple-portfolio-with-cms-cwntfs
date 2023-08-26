@@ -1,5 +1,7 @@
 "use client";
 
+import { EDIT_ICON } from "@/constants/icons";
+import { useUser } from "@/hooks/useUser";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -11,11 +13,12 @@ export type ProjectCardProps = Project;
 export default function ProjectCard({
   id,
   description,
-  image,
+  imageUrl,
   title,
   platforms,
 }: ProjectCardProps) {
   const [isHovered, setIsHovered] = useState(false);
+  const { user } = useUser();
 
   return (
     <div
@@ -26,7 +29,7 @@ export default function ProjectCard({
     >
       <div className="relative mb-4 aspect-square overflow-hidden rounded-lg">
         <Image
-          src={image}
+          src={imageUrl}
           fill
           alt={`Picture of project ${title}`}
           // For some reason, object-fit is not working. So, I used the next/image's objectFit prop instead.
@@ -42,6 +45,36 @@ export default function ProjectCard({
               : "pointer-events-none opacity-0"
           }`}
         >
+          {/* Allow authenticated users to edit the project */}
+          {user && (
+            <Link
+              key={"project-card-edit"}
+              href={`/projects/${id}/edit`}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex w-10/12 items-center justify-center rounded-lg bg-gray-50 px-3 py-2.5 text-base font-normal text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+            >
+              {EDIT_ICON}
+              <span className="mx-2 w-full font-light text-white">
+                Edit Project
+              </span>
+              <svg
+                className="h-4 w-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                />
+              </svg>
+            </Link>
+          )}
           {platforms.length &&
             platforms.map((platform) => (
               <Link

@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    // Allow loading images from your Supabase local dev environment
+    domains: ["localhost"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -3,9 +3,9 @@ import Shell from "../components/Shell";
 import "./globals.css";
 
 export const metadata = {
-  title: "Demo of simple-portfolio-cwntf",
+  title: "Demo of simple-portfolio-with-cms-cwntf",
   description:
-    "Code Practice: Simple Portfolio — Next.js 13 App Router, Tailwind CSS, Flowbite",
+    "Code Practice: Simple Portfolio with CMS — Next.js 13 App Router, Tailwind CSS, Flowbite, Supabase",
 };
 export default function RootLayout({
   children,

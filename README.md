@@ -1,23 +1,16 @@
-# Code Practice: Simple Portfolio — Next.js, Tailwind CSS, Flowbite
+# Code Practice: Simple Portfolio with CMS— Next.js, Tailwind CSS, Flowbite, Supabase
 
-Practice quick web dev with Next.js 13 App Router following a single article. No backend.
-
-![simple-portfolio-cwntf Thumbnail Image](https://github.com/saikise/simple-portfolio-cwntf/assets/134133636/ff5e9652-106f-4840-8b7a-3332e266779d)
-
-
-https://github.com/saikise/simple-portfolio-cwntf/assets/134133636/fa912d41-1f2e-4a82-a2b5-9c3242c0ab3e
-
-![Component Visualization](https://github.com/saikise/simple-portfolio-cwntf/assets/134133636/bab6cf7c-3543-4b38-9c40-cc0e6847d5bd)
+Quickly practice full-stack web dev following a single article.
 
 ## Description
 
 **Tutorial on Medium**
 
-1. https://medium.com/@saikise/code-crafts-simple-portfolio-cwntf-88b6e48a50e3
+1. In progress.
 
 **Live demo on Vercel**
 
-1. https://simple-portfolio-cwntf.vercel.app
+1. In progress.
 
 **Series:**
 
@@ -32,11 +25,11 @@ https://github.com/saikise/simple-portfolio-cwntf/assets/134133636/fa912d41-1f2e
 1. [Next.js 13](https://nextjs.org/docs)
 1. [Tailwind CSS](https://tailwindcss.com/)
 1. [Flowbite](https://flowbite.com/)
+1. [Supabase](https://supabase.com/)
 
 **Notes:**
 
-1. No backend needed. Portfolio data stored in `projects.tsx` and `data.ts`.
-1. Uses Next.js App Router (mostly server components).
+1. Uses Next.js App Router.
 1. No global state.
 
 ## Getting Started
@@ -54,7 +47,7 @@ Before you begin, ensure you have the following software installed:
 1. Create your GitHub repo using this project as template.
 
 ```bash
-gh repo create <repo-name> --public --template=saikise/simple-portfolio-cwntf
+gh repo create <repo-name> --public --template=saikise/simple-portfolio-with-cms-cwntfs
 ```
 
 1. Install the dependencies listed in `package.json`.

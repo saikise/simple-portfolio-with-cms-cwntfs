@@ -1,12 +1,18 @@
+import { EDIT_ICON } from "@/constants/icons";
+import { User } from "@supabase/supabase-js";
 import Image from "next/image";
 import Link from "next/link";
 import { DEFAULT_BLUR_DATA_URL } from "../constants/colors";
 import { ProjectCardProps } from "./ProjectCard";
 
-export type ProjectRowProps = ProjectCardProps;
+export type ProjectRowProps = ProjectCardProps & {
+  user: User | null;
+};
 
 export default function ProjectRow({
-  image,
+  user,
+  id,
+  imageUrl,
   title,
   description,
   platforms,
@@ -16,7 +22,7 @@ export default function ProjectRow({
       <div className="grid flex-1 grid-cols-10 items-center">
         <div className="relative col-start-1 col-end-3 aspect-square rounded-lg">
           <Image
-            src={image}
+            src={imageUrl}
             fill
             alt={`Picture of project ${title}`}
             // For some reason, object-fit is not working. So, I used the next/image's objectFit prop instead.
@@ -36,8 +42,19 @@ export default function ProjectRow({
               {description}
             </p>
           </div>
-
           <div className="flex flex-row gap-2">
+            {/* Allow authenticated users to edit the project */}
+            {user && (
+              <Link
+                key={"project-row-edit"}
+                href={`/projects/${id}/edit`}
+                className="inline-flex w-fit items-center justify-center rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+                target="_blank"
+                rel="noopener"
+              >
+                {EDIT_ICON} <span className="ml-2">Edit Project</span>
+              </Link>
+            )}
             {platforms.length &&
               platforms.map((platform) => (
                 <Link

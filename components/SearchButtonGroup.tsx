@@ -1,25 +1,25 @@
+import { Series } from "@/lib/types";
 import Link from "next/link";
-import { ALL, SERIES_LIST } from "../constants/data";
 
 interface SearchButtonGroupProps {
   keyword: string;
   seriesCode: string;
+  seriesList: Series[];
 }
 
-export default function SearchButtonGroup({
+export default async function SearchButtonGroup({
   keyword,
   seriesCode,
+  seriesList,
 }: SearchButtonGroupProps) {
-  const allSeries = [ALL, ...SERIES_LIST];
-
   return (
     <div className="inline-flex rounded-md shadow-sm" role="group">
-      {allSeries.map((s, i) => {
+      {seriesList.map((s, i) => {
         // If first or last button, add rounded corner.
         const addRoundedCorner =
           i === 0
             ? "rounded-l-lg"
-            : i === allSeries.length - 1
+            : i === seriesList.length - 1
             ? "rounded-r-md"
             : "";
         // Determine active button

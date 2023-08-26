@@ -1,10 +1,22 @@
-import { SERIES_LIST, SOCIALS } from "@/constants/data";
-import { FOLDER_ICON, HOME_ICON, SEARCH_ICON } from "../constants/icons";
+"use client";
+
+import { SOCIALS } from "@/constants/data";
+import { useSeriesList } from "@/hooks/useSeriesList";
+import { useUser } from "@/hooks/useUser";
+import {
+  FOLDER_ICON,
+  HOME_ICON,
+  PLUS_ICON,
+  SEARCH_ICON,
+} from "../constants/icons";
 import SidebarItem from "./SidebarItem";
 import SidebarToggleClose from "./SidebarToggleClose";
 import Socials from "./Socials";
 
-export default async function Sidebar() {
+export default function Sidebar() {
+  const { user } = useUser();
+  const { seriesList } = useSeriesList();
+
   return (
     <aside
       className="fixed left-0 top-0 z-40 h-screen w-64 -translate-x-full border-r border-gray-200 bg-white transition-transform dark:border-gray-700 dark:bg-gray-800 md:translate-x-0"
@@ -24,16 +36,28 @@ export default async function Sidebar() {
           </li>
         </ul>
         <ul className="mt-5 space-y-2 border-t border-gray-200 pt-5 dark:border-gray-700">
-          {SERIES_LIST.map((series) => (
+          {seriesList.map((series) => (
             <li key={series.code}>
               <SidebarItem
                 title={series.title}
-                url={series.code}
+                url={`/${series.code}`}
                 icon={series.icon || FOLDER_ICON}
               />
             </li>
           ))}
         </ul>
+        {/* Allow authenticated users to add projects */}
+        {user && (
+          <ul className="mt-5 space-y-2 border-t border-gray-200 pt-5 dark:border-gray-700">
+            <li key="sidebarContentManagementSystem">
+              <SidebarItem
+                title="Add project"
+                url="/projects/add"
+                icon={PLUS_ICON}
+              />
+            </li>
+          </ul>
+        )}
         <div className="absolute bottom-0 left-0 z-20 w-full space-x-4 bg-white px-4 pb-4 dark:bg-gray-800 lg:flex">
           <div className="flex w-full flex-nowrap justify-center gap-2">
             <span className="flex flex-nowrap items-center justify-center whitespace-nowrap text-sm text-gray-900 dark:text-white">
