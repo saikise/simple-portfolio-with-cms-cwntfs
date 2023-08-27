@@ -4,7 +4,7 @@ Quickly practice full-stack web dev following a single article.
 
 ## Description
 
-**Tutorial on Medium**
+**Complete Step-by-step Tutorial on Medium**
 
 1. In progress.
 
