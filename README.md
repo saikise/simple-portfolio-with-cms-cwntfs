@@ -10,7 +10,7 @@ Quickly practice full-stack web dev following a single article.
 
 **Live demo on Vercel**
 
-1. In progress.
+1. https://simple-portfolio-with-cms-cwntfs.vercel.app
 
 **Series:**
 
