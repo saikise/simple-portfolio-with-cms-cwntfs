@@ -2,7 +2,7 @@
 const nextConfig = {
   images: {
     // Allow loading images from your Supabase local dev environment
-    domains: [process.env.SUPABASE_DOMAIN],
+    domains: [`${process.env.SUPABASE_DOMAIN}`],
   },
 };
 
