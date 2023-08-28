@@ -6,7 +6,7 @@ INSERT INTO series (code, title, description, icon) VALUES
 ('desktop-projects', 'Desktop Projects', 'My desktop projects mostly created with Electron.', 'desktop');
 
 INSERT INTO platforms (title, icon) VALUES 
-('Live Demo', 'demo'),
+('Demo', 'demo'),
 ('YouTube', 'youtube');
 
 INSERT INTO projects (pinned, title, description, image) VALUES 
@@ -58,24 +58,24 @@ INSERT INTO projects_series (project_id, series_id) VALUES
 
 -- Attach platforms to projects
 INSERT INTO projects_platforms (project_id, platform_id, url) VALUES 
-((SELECT id FROM projects WHERE title = 'Simple Portfolio'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Ecommerce Store'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Social Media App'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Recipe App'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Movie App'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Music App'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'News App'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Job Board'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Chat App'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Blog App'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Weather App'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Food Delivery App'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Fitness App'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Travel App'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Language Learning App'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Note-taking app'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Music Player'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Study Spatial Repetition App'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo'),
-((SELECT id FROM projects WHERE title = 'Anki Clone'), (SELECT id FROM platforms WHERE title = 'Live Demo'), '/demo');
+((SELECT id FROM projects WHERE title = 'Simple Portfolio'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Ecommerce Store'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Social Media App'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Recipe App'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Movie App'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Music App'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'News App'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Job Board'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Chat App'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Blog App'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Weather App'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Food Delivery App'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Fitness App'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Travel App'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Language Learning App'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Note-taking app'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Music Player'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Study Spatial Repetition App'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo'),
+((SELECT id FROM projects WHERE title = 'Anki Clone'), (SELECT id FROM platforms WHERE title = 'Demo'), '/demo');
 
 COMMIT;
