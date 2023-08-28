@@ -31,6 +31,9 @@ export default function SignUpForm() {
         <h4 className="text-2xl font-bold text-white">
           Sign up to your account
         </h4>
+        <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+          Sign up is turned off in live demo.
+        </p>
         <form className="space-y-4 md:space-y-6" onSubmit={handleSubmit}>
           <div>
             <label
