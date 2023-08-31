@@ -1,6 +1,6 @@
-# Code Practice: Simple Portfolio with CMS— Next.js, Tailwind CSS, Flowbite, Supabase
+# Code Practice: How to create Simple Portfolio with CMS — Full-stack, Next.js, Tailwind CSS, Flowbite, Supabase
 
-Quickly practice full-stack web dev following a single article.
+Create portfolio with content management system following a single article.
 
 ## Description
 
@@ -16,10 +16,6 @@ Quickly practice full-stack web dev following a single article.
 
 1. [Code Practice on Medium](https://medium.com/@saikise/list/code-practice-780f4532716a)
 
-**Platform:**
-
-1. Web
-
 **Stack:**
 
 1. [Next.js 13](https://nextjs.org/docs)
@@ -27,10 +23,12 @@ Quickly practice full-stack web dev following a single article.
 1. [Flowbite](https://flowbite.com/)
 1. [Supabase](https://supabase.com/)
 
-**Notes:**
+**Some concepts you’ll see here**
 
-1. Uses Next.js App Router.
-1. No global state.
+1. Next.js App Router
+1. Next.js server and client components
+1. PostgreSQL database functions, policies, and trigger.
+1. Supabase database and storage CRUD.
 
 ## Getting Started
 
