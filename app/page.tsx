@@ -28,17 +28,17 @@ export default async function Page() {
           <Link
             target="_blank"
             rel="noopener"
-            href="https://medium.com/@saikise/list/code-practice-780f4532716a"
+            href="https://medium.com/@saikise/code-practice-how-to-create-simple-portfolio-with-cms-next-js-tailwind-css-flowbite-supabase-c101e25c7fc3"
           >
             🧱 Tutorial on Medium
           </Link>
         </h3>
         <i className="text-sm font-normal text-gray-700 dark:text-gray-400">
-          Quickly practice full-stack web dev.
+          Create simple portfolio with content management system following a single article.
           <br />
           <b>Stack:</b> Next.js, Tailwind CSS, Flowbite, Supabase.
           <br />
-          <b>Tags:</b> Next.js 13 App Router.
+          <b>Tags:</b> Next.js App Router.
         </i>
       </div>
       {!!pinned.length && (
