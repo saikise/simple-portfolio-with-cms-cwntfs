@@ -4,9 +4,9 @@ Create portfolio with content management system following a single article.
 
 ## Description
 
-**Complete Step-by-step Tutorial on Medium**
+**Complete Step-by-step Tutorial**
 
-1. In progress.
+1. [Read on Medium](https://medium.com/@saikise/code-practice-how-to-create-simple-portfolio-with-cms-next-js-tailwind-css-flowbite-supabase-c101e25c7fc3)
 
 **Live demo on Vercel**
 
@@ -30,31 +30,14 @@ Create portfolio with content management system following a single article.
 1. PostgreSQL database functions, policies, and trigger.
 1. Supabase database and storage CRUD.
 
+**Notes**
+1. Components and icons used in this project are from Flowbite.
+1. Authentication page navigation buttons are not included in Sidebar.tsx since the auth is only exclusive to owner of the web portfolio. User must manually visit `/sign-up` and `/sign-in` page via the address bar.
+1. This project also only allows whitelisted emails to sign up and sign in to the app and acquire admin privileges such as adding and editing projects. Check `app/auth/sign-in/route.ts` and `app/auth/sign-up/route.ts`.
+
 **Preview**
 
-| ![A screenshot of the authentication page](https://github.com/saikise/simple-portfolio-with-cms-cwntfs/assets/134133636/a6f2dab5-1bc2-4395-b629-544908b103f1) |
-|:--:|
-| Authentication |
-
-| ![A screenshot of the home page](https://github.com/saikise/simple-portfolio-with-cms-cwntfs/assets/134133636/6cc7ebff-f908-4e56-b63a-143fa60c03a7) |
-|:--:|
-| Home page |
-
-| ![A screenshot of the projects per series page](https://github.com/saikise/simple-portfolio-with-cms-cwntfs/assets/134133636/b977ac43-5dcd-4680-b773-b8a0c58a08b5) |
-|:--:|
-| Projects per series page |
-
-| ![A screenshot of the search project page](https://github.com/saikise/simple-portfolio-with-cms-cwntfs/assets/134133636/3847de5d-1f70-47cb-8aa1-5b79c47167e9) |
-|:--:|
-| Search project page |
-
-| ![A screenshot of the add project page](https://github.com/saikise/simple-portfolio-with-cms-cwntfs/assets/134133636/1b78e8bb-ae1a-4b11-a98a-e7ef374ed97a) |
-|:--:|
-| Add project page |
-
-| ![A screenshot of the edit project page](https://github.com/saikise/simple-portfolio-with-cms-cwntfs/assets/134133636/d9c2da8f-4797-4a83-a17f-164d6fb10612) |
-|:--:|
-| Edit project page |
+![Preview](https://github.com/saikise/simple-portfolio-with-cms-cwntfs/assets/134133636/ede36bcb-97bf-4cd5-a8f6-11fa7e993a4f)
 
 ## Getting Started
 
